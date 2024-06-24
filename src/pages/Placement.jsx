@@ -2,8 +2,9 @@ import React from 'react'
 
 function Placement() {
   return (
-    <div>
+    <div className='mt-20 ml-9'>
       Placement page
+     
     </div>
   )
 }
