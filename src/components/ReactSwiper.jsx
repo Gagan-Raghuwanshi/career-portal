@@ -13,7 +13,7 @@ const ReactSwiper = () => {
         autoplay={{ delay: 3000 }} // Adjust delay as per your requirement
         loop={true}
         modules={[Autoplay, Navigation]}
-        className="mySwiper"
+        className="mySwiper mt-16"
       >
         <SwiperSlide>
           <img className="w-full h-96" src="https://nikonrumors.com/wp-content/uploads/2014/09/Nikon-D750-sample-photo1.jpg" alt="" />

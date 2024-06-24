@@ -6,6 +6,7 @@ import { FaReact } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import QuickEnquiryModel from "./QuickEnquiryModel";
 
 function Header() {
   const [li1, setLi1] = useState(true);
@@ -53,16 +54,19 @@ function Header() {
 
   const location = useLocation();
 
+  // Model functionality
+  const [openModel, setOpenModel] = useState(false);
+
   return (
     <div>
       <header className="flex border-b bg-white font-sans min-h-[70px] w-full top-0 tracking-wide fixed z-50">
+        {openModel &&
+        <QuickEnquiryModel openModel={()=>setOpenModel(false)} />
+      }
+
         <div className="flex flex-wrap items-center justify-center px-10 py-3 w-full gap-4 lg:gap-56">
           <Link to={"/"}>
-            <img
-              src=""
-              alt=" Brand logo"
-              className="w-36"
-            />
+            <img src="" alt=" Brand logo" className="w-36" />
           </Link>
           <div
             id="collapseMenu"
@@ -427,7 +431,8 @@ function Header() {
                     location.pathname === "/placement"
                       ? "text-[#007bff]"
                       : "text-gray-600"
-                  } hover:text-[#007bff]  text-[15px] font-bold block`}                >
+                  } hover:text-[#007bff]  text-[15px] font-bold block`}
+                >
                   Placements
                 </Link>
               </li>
@@ -456,7 +461,10 @@ function Header() {
                 </Link>
               </li>
               <li className="max-lg:border-b max-lg:py-3">
-                <button className="bg-yellow-500 text-white font-bold px-4 py-2  hover:bg-yellow-600 rounded-full">
+                <button
+                  className="bg-yellow-500 text-white font-bold px-4 py-2  hover:bg-yellow-600 rounded-full"
+                  onClick={()=>setOpenModel(true)}
+                >
                   Quick Enquiry
                 </button>
               </li>
@@ -464,7 +472,7 @@ function Header() {
           </div>
         </div>
       </header>
-      <Outlet/>
+      <Outlet />
     </div>
   );
 }
