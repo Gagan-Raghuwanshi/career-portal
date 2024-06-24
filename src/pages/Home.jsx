@@ -27,14 +27,14 @@ function Home() {
           <Cart img={img1} />
         </div>
       </div>
-      <div className="w-full bg-slate-400 h-[550px] flex flex-col ">
+      <div className="w-full h-[550px] flex flex-col ">
         <div className=" px-40 mt-10 ">
           <h6 className="text-4xl font-normal">Why to join Webgurukul</h6>
           <p className="text-lg leading-10">
             Learn from step-by-step instructions combined.
           </p>
         </div>
-        <div className="bg-slate-200 px-40 mt-10 flex justify-between">
+        <div className=" px-40 mt-10 flex justify-between">
           <div className=" flex flex-col gap-2">
             <div className="flex gap-4 text-xl">
               <FcManager size={28} />
@@ -69,34 +69,34 @@ function Home() {
             <div className="flex flex-col gap-6">
               <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
-                <button className="">Practice session</button>
+                <button className="text-xl">Practice session</button>
                 <FaAngleRight size={30} />
               </div>
               <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
-                <button className="">Live Project Work</button>
+                <button className="text-xl">Live Project Work</button>
                 <FaAngleRight size={30} />
               </div>
               <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
-                <button className="">Placement Assistence</button>
+                <button className="text-xl">Placement Assistence</button>
                 <FaAngleRight size={30} />
               </div>
             </div>
             <div className="flex flex-col gap-6">
               <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
-                <button className="">Exprience Trainer </button>
+                <button className="text-xl">Exprience Trainer </button>
                 <FaAngleRight size={30} />
               </div>
               <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
-                <button className="">IT Corporate Training </button>
+                <button className="text-xl">IT Corporate Training </button>
                 <FaAngleRight size={30} />
               </div>
               <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
-                <button className="">Free Study Material </button>
+                <button className="text-xl">Free Study Material </button>
                 <FaAngleRight size={30} />
               </div>
             </div>
