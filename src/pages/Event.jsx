@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Event() {
-  return (
-    <div>
-      Event page
-    </div>
-  )
+  return <div className="mt-[73px]">Event page</div>;
 }
 
-export default Event
+export default Event;

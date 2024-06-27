@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 99vw;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #15181d;
+    color: #fff;
+    font-family: 'quicksandregular';
+    padding: 20px;
+}
+
+.footer .Ftext {
+    cursor: pointer;
+    height: min-content;
+    margin: 10px;
+    flex: 1 1 200px;
+    padding: 2rem;
+}
+
+.Ftext a {
+    line-height: 1rem;
+    padding-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.Ftext a:hover {
+    color: orange;
+}
+
+.border {
+    padding-left: 0.5rem;
+}
+
+.copyright {
+    position: relative;
+    top: 150px;
+}
+
+.Ftext p {
+    width: 70%;
+    padding-top: 10px;
+}
+
+.Ftext input {
+    height: 2rem;
+    width: 70%;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid rgb(111, 111, 212);
+    border-radius: 5px;
+    margin: 10px 5px 5px 0px;
+    color: white;
+    padding-left: 0.5rem;
+}
+
+.Ftext button {
+    height: 2rem;
+    width: 23%;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Ftext button:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+.Ftext h4 p {
+    margin-top: 15px;
+}
+
+.border {
+    width: 100%;
+}
+
+.icon-container {
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+
+.icon-container i {
+    margin: 1rem;
+}
+
+.icon-container i:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.header {
+    position: relative;
+    bottom: 1rem;
+}
+
+.header:hover {
+    color: orange;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Ftext {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .icon {
+        width: 100%;
+        justify-content: space-around;
+    }
+}

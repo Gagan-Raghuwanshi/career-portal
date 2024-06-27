@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HiMiniComputerDesktop } from "react-icons/hi2";
 import { FaPython } from "react-icons/fa6";
 import { FaAngular } from "react-icons/fa";
@@ -7,6 +7,8 @@ import { FaJava } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import QuickEnquiryModel from "./QuickEnquiryModel";
+import Footer from "./Footer";
+import ModelHomePage from "./ModelHomePage";
 
 function Header() {
   const [li1, setLi1] = useState(true);
@@ -56,13 +58,19 @@ function Header() {
 
   // Model functionality
   const [openModel, setOpenModel] = useState(false);
+  const [popup, setPopup] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setPopup(true)
+    }, 5000);
+  }, [])
 
   return (
     <div>
       <header className="flex border-b bg-white font-sans min-h-[70px] w-full top-0 tracking-wide fixed z-50">
-        {openModel &&
-        <QuickEnquiryModel openModel={()=>setOpenModel(false)} />
-      }
+        {openModel && (
+          <QuickEnquiryModel openModel={() => setOpenModel(false)} />
+        )}
 
         <div className="flex flex-wrap items-center justify-center px-10 py-3 w-full gap-4 lg:gap-56">
           <Link to={"/"}>
@@ -74,7 +82,7 @@ function Header() {
           >
             <button
               id="toggleClose"
-              className="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white p-3"
+              className="lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-black p-3"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -427,11 +435,10 @@ function Header() {
               <li className="max-lg:border-b max-lg:py-3">
                 <Link
                   to={"/placement"}
-                  className={` ${
-                    location.pathname === "/placement"
+                  className={` ${location.pathname === "/placement"
                       ? "text-[#007bff]"
                       : "text-gray-600"
-                  } hover:text-[#007bff]  text-[15px] font-bold block`}
+                    } hover:text-[#007bff]  text-[15px] font-bold block`}
                 >
                   Placements
                 </Link>
@@ -439,11 +446,10 @@ function Header() {
               <li className="max-lg:border-b max-lg:py-3">
                 <Link
                   to={"/event"}
-                  className={` ${
-                    location.pathname === "/event"
+                  className={` ${location.pathname === "/event"
                       ? "text-[#007bff]"
                       : "text-gray-600"
-                  } hover:text-[#007bff]  text-[15px] font-bold block`}
+                    } hover:text-[#007bff]  text-[15px] font-bold block`}
                 >
                   Events
                 </Link>
@@ -451,11 +457,10 @@ function Header() {
               <li className="max-lg:border-b max-lg:py-3">
                 <Link
                   to={"/contactus"}
-                  className={` ${
-                    location.pathname === "/contactus"
+                  className={` ${location.pathname === "/contactus"
                       ? "text-[#007bff]"
                       : "text-gray-600"
-                  } hover:text-[#007bff]  text-[15px] font-bold block`}
+                    } hover:text-[#007bff]  text-[15px] font-bold block`}
                 >
                   Contact Us
                 </Link>
@@ -463,7 +468,7 @@ function Header() {
               <li className="max-lg:border-b max-lg:py-3">
                 <button
                   className="bg-yellow-500 text-white font-bold px-4 py-2  hover:bg-yellow-600 rounded-full"
-                  onClick={()=>setOpenModel(true)}
+                  onClick={() => setOpenModel(true)}
                 >
                   Quick Enquiry
                 </button>
@@ -471,8 +476,12 @@ function Header() {
             </ul>
           </div>
         </div>
+        {
+          popup && <ModelHomePage setPopup={() => setPopup(false)} />
+        }
       </header>
       <Outlet />
+      <Footer />
     </div>
   );
 }

@@ -1,20 +1,33 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Cart({img}) {
+function Cart({ img, courseName, courseContent, route }) {
   return (
-    <div className=''>
-        <div className="w-72 border-2">
-            <div className=" cursor-pointer">
-                <img src={img} />
-            </div>
-            <div className="p-5">
-                <h6 className='font-semibold text-lg'>Full Stack website Designing: Beginner to Advance</h6>
-                <p className='mt-4'><span className='font-medium'>Course contents:</span> HTML, CSS, JavaScript...</p>
-                <h6 className='mt-4 font-medium cursor-pointer text-yellow-500 hover:text-yellow-600'>Explore More...</h6>
-            </div>
+    <div className="">
+      <div className="w-72 border-2 ">
+        <Link to={route} >
+        <div className=" cursor-pointer">
+          <img src={img} className="h-52" />
         </div>
+        </Link>
+        <div className="p-5">
+          <h6 className="">
+            <span className="font-semibold text-lg">Course Name: </span>
+            {courseName}
+          </h6>
+          <p className="mt-4">
+            <span className="font-medium">Course contents:</span>{" "}
+            {courseContent.slice(0,25)}...
+          </p>
+          <Link to={route}>
+          <h6 className="mt-4 font-medium cursor-pointer text-yellow-500 hover:text-yellow-600">
+            Explore More...
+          </h6>
+          </Link>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Cart
+export default Cart;

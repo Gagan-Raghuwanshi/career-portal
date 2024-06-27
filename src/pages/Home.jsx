@@ -5,36 +5,104 @@ import Cart from "../components/CartCourse";
 import { FcManager } from "react-icons/fc";
 import { MdOutlineMenuBook } from "react-icons/md";
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
-const img1 =
-  "https://th.bing.com/th/id/OIP.EoJvVpBnjpiJr1JjS1P8jAHaE7?rs=1&pid=ImgDetMain";
+// const img1 = "";
+// const img2 = ""
+// const img3 =
+// const img4 = ""
+// const img5 = ""
+// const img6 = ""
 
 function Home() {
+  const cartData = [
+    {
+      courseName: "Frontend Developement",
+      courseContent: "HTML, CSS, JavaScript,React",
+      img: "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/232998177/original/5fbaf41f751d591127240adef8b6ec62a3f861c8/be-front-end-web-developer-in-react-js.png",
+      route: "/frontendreact",
+    },
+    {
+      courseName: "Backend Development",
+      courseContent: "Node.js, Express, Mongodb",
+      img: "https://th.bing.com/th/id/OIP.3pPJQKaUEdqQUjkWge0M3gHaEK?rs=1&pid=ImgDetMain",
+      route: "/backendnodejs",
+
+    },
+    {
+      courseName: ".Net Develeopment",
+      courseContent: "HTML, CSS, JavaScript",
+      img: "https://th.bing.com/th/id/OIP.qpLzCY94b9y4aWbvkKNxjwHaFV?rs=1&pid=ImgDetMain",
+      route: "/dotnetdevelopement",
+
+    },
+    {
+      courseName: "App Development",
+      courseContent: "iOS, Android, Flutter",
+      img: "https://purpletutor.com/wp-content/uploads/2023/02/App-development.png",
+      route: "/appdevelopement",
+
+    },
+    {
+      courseName: "Digital Marketing Fundamentals",
+      courseContent: "SEO, SEM, Social Media Marketing",
+      img: "https://digitalquest.in/wp-content/uploads/2023/10/Digital-Marketing-course-in-hyderabad-600x400.jpg",
+      route: "/digitalmarketing",
+
+    },
+    {
+      courseName: "Python Development",
+      courseContent: "Python, Django, Flask",
+      img: "https://th.bing.com/th/id/OIP.wXn88A-eYmSm0hx-bbsh6AHaEK?rs=1&pid=ImgDetMain",
+      route: "/pythondevelopement",
+
+    },
+    {
+      courseName: "UI/UX Design Fundamentals",
+      courseContent:
+        "User Research, Wireframing, Prototyping, UI Design Principles",
+      img: "https://www.whitepeakdigital.com/wp-content/uploads/UX-vs-UI.png",
+      route: "/uiuxdesign",
+
+    },
+    {
+      courseName: "HR Management Fundamentals",
+      courseContent: "Recruitment, Performance Management, Training and Development, HR Policies",
+      img: "https://th.bing.com/th/id/OIP.9yBAM10QmaZYFT3CGqem_gAAAA?rs=1&pid=ImgDetMain",
+      route: "/hemanagement",
+
+    }
+  ];
   return (
-    <div>
+    <div className="mt-[73px]  ">
       <ReactSwiper />
-      <div className="flex flex-col  items-center justify-center">
-        <div className="bg-whit mt-4 gap-9 flex ">
-          <Cart img={img1} />
-          <Cart img={img1} />
-          <Cart img={img1} />
-          <Cart img={img1} />
-        </div>
-        <div className="bg-white mt-4 gap-9 flex ">
-          <Cart img={img1} />
-          <Cart img={img1} />
-          <Cart img={img1} />
-          <Cart img={img1} />
+      <div className="mt-10 flex items-center justify-center font-serif">
+        <span className="text-4xl font-semibold">Our Courses</span>
+      </div>
+      <div className=" px-40 mt-16 items-center justify-center">
+        <div className="bg-whit mt-4 gap-9 grid items-center justify-center  lg:grid lg:grid-cols-4 ">
+          {cartData.map((item) => (
+            // <Link to={item.route}>
+            <Cart
+              img={item.img}
+              courseName={item.courseName}
+              courseContent={item.courseContent}
+              route={item.route}
+            />
+            // </Link>
+          ))}
         </div>
       </div>
-      <div className="w-full h-[550px] flex flex-col ">
-        <div className=" px-40 mt-10 ">
-          <h6 className="text-4xl font-normal">Why to join Webgurukul</h6>
-          <p className="text-lg leading-10">
+      <div className="w-full py-10 mt-10  flex flex-col bg-orange-100 ">
+        <div className="px-5 lg:px-40 ">
+          <h6 className=" text-2xl lg:text-4xl font-normal">
+            Why to join Webgurukul
+          </h6>
+          <p className="text-lg mt-6 lg:mt-0 lg:leading-10">
             Learn from step-by-step instructions combined.
           </p>
         </div>
-        <div className=" px-40 mt-10 flex justify-between">
+        <div className="px-5  lg:px-40 mt-10 lg:flex lg:justify-between">
           <div className=" flex flex-col gap-2">
             <div className="flex gap-4 text-xl">
               <FcManager size={28} />
@@ -65,36 +133,36 @@ function Home() {
               <p>Personal Attention.</p>
             </div>
           </div>
-          <div className="flex gap-20">
+          <div className=" px-10 lg:px-0 mt-10 lg:mt-0 lg:flex lg:gap-20">
             <div className="flex flex-col gap-6">
-              <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
+              <div className="flex justify-evenly cursor-pointer gap-1 lg:gap-8 py-4 px-1 lg:px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
                 <button className="text-xl">Practice session</button>
                 <FaAngleRight size={30} />
               </div>
-              <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
+              <div className="flex justify-evenly cursor-pointer gap-1 lg:gap-8 py-4 px-1 lg:px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
                 <button className="text-xl">Live Project Work</button>
                 <FaAngleRight size={30} />
               </div>
-              <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
+              <div className="flex justify-evenly cursor-pointer gap-1 lg:gap-8 py-4 px-1 lg:px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
                 <button className="text-xl">Placement Assistence</button>
                 <FaAngleRight size={30} />
               </div>
             </div>
-            <div className="flex flex-col gap-6">
-              <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
+            <div className=" mt-6 lg:mt-0 flex flex-col gap-6">
+              <div className="flex justify-evenly cursor-pointer gap-1 lg:gap-8 py-4 px-1 lg:px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
                 <button className="text-xl">Exprience Trainer </button>
                 <FaAngleRight size={30} />
               </div>
-              <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
+              <div className="flex justify-evenly cursor-pointer gap-1 lg:gap-8 py-4 px-1 lg:px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
                 <button className="text-xl">IT Corporate Training </button>
                 <FaAngleRight size={30} />
               </div>
-              <div className="flex justify-evenly gap-8 py-4 px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
+              <div className="flex justify-evenly cursor-pointer gap-1 lg:gap-8 py-4 px-1 lg:px-5 rounded-full border-2 border-black hover:text-yellow-500 ">
                 <MdOutlineMenuBook size={30} />
                 <button className="text-xl">Free Study Material </button>
                 <FaAngleRight size={30} />
