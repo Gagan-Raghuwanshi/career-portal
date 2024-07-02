@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function ModelHomePage({setPopup}) {
 
   return (
-    <div className='bg-black bg-opacity-30 backdrop-blur-sm w-full h-full fixed z-50 flex items-end '>
+    <div className='bg-black bg-opacity-30 backdrop-blur-sm w-full h-full fixed z-50 flex items-center justify-center '>
       <div className="bg-white w-[500px] h-[500px]">
         <form action="">
           <div className="justify-end flex">

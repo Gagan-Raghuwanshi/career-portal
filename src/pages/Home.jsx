@@ -81,19 +81,20 @@ function Home() {
       </div>
       <div className=" px-40 mt-16 items-center justify-center">
         <div className="bg-whit mt-4 gap-9 grid items-center justify-center  lg:grid lg:grid-cols-4 ">
-          {cartData.map((item) => (
+          {cartData.map((item,index) => (
             // <Link to={item.route}>
             <Cart
               img={item.img}
               courseName={item.courseName}
               courseContent={item.courseContent}
               route={item.route}
+              key={index}
             />
             // </Link>
           ))}
         </div>
       </div>
-      <div className="w-full py-10 mt-10  flex flex-col bg-orange-100 ">
+      <div className="w-full py-10 mt-10  flex flex-col bg-slate-100 ">
         <div className="px-5 lg:px-40 ">
           <h6 className=" text-2xl lg:text-4xl font-normal">
             Why to join Webgurukul

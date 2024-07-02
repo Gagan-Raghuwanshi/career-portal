@@ -39,10 +39,10 @@ function Footer() {
             <p>Subscribe to our newsletter for a weekly dose of news,updates,helpful tips and exclussive offers.</p>
             <input type="text" placeholder="Email"></input>
             <button>Subscribe</button>
-            <div className="icon-container"> <i class="fa-brands fa-facebook icon1"></i>
-            <i class="fa-brands fa-github icon2" ></i>
-            <i class="fa-brands fa-linkedin icon3"></i>
-            <i class="fa-brands fa-twitter icon4"></i>
+            <div className="icon-container"> <i className="fa-brands fa-facebook icon1"></i>
+            <i className="fa-brands fa-github icon2" ></i>
+            <i className="fa-brands fa-linkedin icon3"></i>
+            <i className="fa-brands fa-twitter icon4"></i>
             </div>
            
             

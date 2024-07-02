@@ -102,18 +102,16 @@ function Header() {
 
             <ul className="lg:flex lg:items-center lg:justify-center lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
               <li className="mb-6 hidden max-lg:block">
-                <a href="javascript:void(0)">
+                <Link>
                   <img
                     src="https://readymadeui.com/readymadeui.svg"
                     alt="logo"
                     className="w-36"
                   />
-                </a>
+                </Link>
               </li>
               <li className="group max-lg:border-b max-lg:py-3 relative">
-                <a
-                  href="javascript:void(0)"
-                  className="hover:text-[#007bff] text-gray-600 text-[15px] font-bold block"
+                <Link className="hover:text-[#007bff] text-gray-600 text-[15px] font-bold block"
                 >
                   Courses
                   <svg
@@ -129,7 +127,7 @@ function Header() {
                       data-original="#000000"
                     />
                   </svg>
-                </a>
+                </Link>
                 <ul className="absolute shadow-lg mt-5  bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6  z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
                   <div className="flex mt-2 gap-4 ">
                     <div className="w-36 h-36 hover:rounded-md hover:bg-slate-100 flex items-center justify-center flex-col">
@@ -186,9 +184,7 @@ function Header() {
                 </ul>
               </li>
               <li className="group max-lg:border-b max-lg:py-3 relative">
-                <a
-                  href="javascript:void(0)"
-                  className="hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block"
+                <Link className="hover:text-[#007bff] text-gray-600 text-[15px] font-bold lg:hover:fill-[#007bff] block"
                 >
                   Programs
                   <svg
@@ -204,7 +200,7 @@ function Header() {
                       data-original="#000000"
                     />
                   </svg>
-                </a>
+                </Link>
                 <ul className="absolute shadow-lg -ml-48 mt-5 bg-white space-y-3 lg:top-5 max-lg:top-8 -left-6 z-50 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-[700px] px-6 group-hover:pb-4 group-hover:pt-6 transition-all duration-500">
                   {li1 && (
                     <div className="w-[900px] flex gap-4">
@@ -436,8 +432,8 @@ function Header() {
                 <Link
                   to={"/placement"}
                   className={` ${location.pathname === "/placement"
-                      ? "text-[#007bff]"
-                      : "text-gray-600"
+                    ? "text-[#007bff]"
+                    : "text-gray-600"
                     } hover:text-[#007bff]  text-[15px] font-bold block`}
                 >
                   Placements
@@ -447,8 +443,8 @@ function Header() {
                 <Link
                   to={"/event"}
                   className={` ${location.pathname === "/event"
-                      ? "text-[#007bff]"
-                      : "text-gray-600"
+                    ? "text-[#007bff]"
+                    : "text-gray-600"
                     } hover:text-[#007bff]  text-[15px] font-bold block`}
                 >
                   Events
@@ -458,8 +454,8 @@ function Header() {
                 <Link
                   to={"/contactus"}
                   className={` ${location.pathname === "/contactus"
-                      ? "text-[#007bff]"
-                      : "text-gray-600"
+                    ? "text-[#007bff]"
+                    : "text-gray-600"
                     } hover:text-[#007bff]  text-[15px] font-bold block`}
                 >
                   Contact Us

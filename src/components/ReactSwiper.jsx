@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import img3 from '../../public/jvmgowy4.png'
 
 const ReactSwiper = () => {
   return (
@@ -18,22 +19,22 @@ const ReactSwiper = () => {
     >
       <SwiperSlide>
         <img
-          className="w-full h-96"
-          src="https://th.bing.com/th/id/OIP.PMBiSa-JBIhSrPqckRRxyQHaEK?rs=1&pid=ImgDetMain"
+          className="w-full h-[500px]"
+          src="https://itechnasik.com/wp-content/uploads/2023/11/Mern-Stack-Developer.png"
           alt=""
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
-          className="w-full h-96"
-          src="https://th.bing.com/th/id/OIP.ylvI5Jem741I2sN2WySPZAAAAA?rs=1&pid=ImgDetMain"
+          className="w-full h-[500px]"
+          src="https://www.spec-india.com/wp-content/uploads/2020/06/Full_Stack.png"
           alt=""
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
-          className="w-full h-96"
-          src="https://ares.decipherzone.com/blog-manager/uploads/banner_8585ee35-ba2b-46dd-b9d5-8467e70dee5f.jpg"
+          className="w-full h-[500px]"
+          src={img3}
           alt=""
         />
       </SwiperSlide>

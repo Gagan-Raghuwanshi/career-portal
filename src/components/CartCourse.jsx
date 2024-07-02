@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function Cart({ img, courseName, courseContent, route }) {
   return (
     <div className="">
-      <div className="w-72 border-2 ">
+      <div className="w-72 border-2 hover:border-yellow-600 hover:shadow-gray-500 hover:shadow-lg ">
         <Link to={route} >
-        <div className=" cursor-pointer">
-          <img src={img} className="h-52" />
+        <div className=" cursor-pointer w-full">
+          <img src={img} className="h-52 w-full " />
         </div>
         </Link>
         <div className="p-5">

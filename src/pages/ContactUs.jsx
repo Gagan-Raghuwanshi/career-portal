@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import { FaPhoneAlt } from "react-icons/fa";
 // import { AiOutlineMail } from "react-icons/ai";
 // import { IoLocationSharp } from "react-icons/io5";
@@ -145,12 +146,9 @@ function ContactUs() {
                                         data-original="#000000"
                                     />
                                 </svg>
-                                <a
-                                    href="javascript:void(0)"
-                                    className="text-white text-sm lg:text-gray-500 ml-4"
-                                >
+                                <Link className="text-white text-sm lg:text-gray-500 ml-4">
                                     contact@royalswebtechpvtltd.com
-                                </a>
+                                </Link>
                             </li>
                             <li className="flex items-center ">
                                 <svg
@@ -166,9 +164,9 @@ function ContactUs() {
                                     ></path>
                                 </svg>
                                 <div className="flex flex-col text-white text-sm lg:text-gray-500 ml-4 mt-4">
-                                    <a href="javascript:void(0)" className="">
+                                    <Link>
                                         Management: 8788447944
-                                    </a>
+                                    </Link>
                                     <div className=" ">
                                         HR Department: 7276081626 /{" "}
                                         <span className="ml-[105px]">8983071626</span>
@@ -193,18 +191,15 @@ function ContactUs() {
                                         data-original="#000000"
                                     ></path>
                                 </svg>
-                                <a
-                                    href="javascript:void(0)"
-                                    className="text-white text-sm lg:text-gray-500 ml-4"
-                                >
+                                <Link className="text-white text-sm lg:text-gray-500 ml-4">
                                     JB Wing, 4th Floor, Mangalwari Complex, Sadar, Nagpur-01
-                                </a>
+                                </Link>
                             </li>
                         </ul>
 
                         <ul className="flex flex-wrap gap-4 mt-16">
                             <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
+                                <Link>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="18px"
@@ -217,10 +212,10 @@ function ContactUs() {
                                             data-original="#000000"
                                         />
                                     </svg>
-                                </a>
+                                </Link>
                             </li>
                             <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
+                                <Link>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="18px"
@@ -233,10 +228,10 @@ function ContactUs() {
                                             data-original="#000000"
                                         />
                                     </svg>
-                                </a>
+                                </Link>
                             </li>
                             <li className="bg-gray-800 hover:bg-gray-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
+                                <Link>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="18px"
@@ -246,7 +241,7 @@ function ContactUs() {
                                     >
                                         <path d="M12 9.3a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm0-1.8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.85-.225a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM12 4.8c-2.227 0-2.59.006-3.626.052-.706.034-1.18.128-1.618.299a2.59 2.59 0 0 0-.972.633 2.601 2.601 0 0 0-.634.972c-.17.44-.265.913-.298 1.618C4.805 9.367 4.8 9.714 4.8 12c0 2.227.006 2.59.052 3.626.034.705.128 1.18.298 1.617.153.392.333.674.632.972.303.303.585.484.972.633.445.172.918.267 1.62.3.993.047 1.34.052 3.626.052 2.227 0 2.59-.006 3.626-.052.704-.034 1.178-.128 1.617-.298.39-.152.674-.333.972-.632.304-.303.485-.585.634-.972.171-.444.266-.918.299-1.62.047-.993.052-1.34.052-3.626 0-2.227-.006-2.59-.052-3.626-.034-.704-.128-1.18-.299-1.618a2.619 2.619 0 0 0-.633-.972 2.595 2.595 0 0 0-.972-.634c-.44-.17-.914-.265-1.618-.298-.993-.047-1.34-.052-3.626-.052ZM12 3c2.445 0 2.75.009 3.71.054.958.045 1.61.195 2.185.419A4.388 4.388 0 0 1 19.49 4.51c.457.45.812.994 1.038 1.595.222.573.373 1.227.418 2.185.042.96.054 1.265.054 3.71 0 2.445-.009 2.75-.054 3.71-.045.958-.196 1.61-.419 2.185a4.395 4.395 0 0 1-1.037 1.595 4.44 4.44 0 0 1-1.595 1.038c-.573.222-1.227.373-2.185.418-.96.042-1.265.054-3.71.054-2.445 0-2.75-.009-3.71-.054-.958-.045-1.61-.196-2.185-.419A4.402 4.402 0 0 1 4.51 19.49a4.414 4.414 0 0 1-1.037-1.595c-.224-.573-.374-1.227-.419-2.185C3.012 14.75 3 14.445 3 12c0-2.445.009-2.75.054-3.71s.195-1.61.419-2.185A4.392 4.392 0 0 1 4.51 4.51c.45-.458.994-.812 1.595-1.037.574-.224 1.226-.374 2.185-.419C9.25 3.012 9.555 3 12 3Z"></path>
                                     </svg>
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
@@ -358,13 +353,13 @@ function ContactUs() {
                                             </clipPath>
                                         </defs>
                                         <g
-                                            clip-path="url(#a)"
+                                            clipPath="url(#a)"
                                             transform="matrix(1.33 0 0 -1.33 0 682.667)"
                                         >
                                             <path
                                                 fill="none"
-                                                stroke-miterlimit="10"
-                                                stroke-width="40"
+                                                strokeMiterlimit="10"
+                                                strokeWidth="40"
                                                 d="M452 444H60c-22.091 0-40-17.909-40-40v-39.446l212.127-157.782c14.17-10.54 33.576-10.54 47.746 0L492 364.554V404c0 22.091-17.909 40-40 40Z"
                                                 data-original="#000000"
                                             ></path>
@@ -400,13 +395,13 @@ function ContactUs() {
                                             </clipPath>
                                         </defs>
                                         <g
-                                            clip-path="url(#a)"
+                                            clipPath="url(#a)"
                                             transform="matrix(1.33 0 0 -1.33 0 682.667)"
                                         >
                                             <path
                                                 fill="none"
-                                                stroke-miterlimit="10"
-                                                stroke-width="40"
+                                                strokeMiterlimit="10"
+                                                strokeWidth="40"
                                                 d="M452 444H60c-22.091 0-40-17.909-40-40v-39.446l212.127-157.782c14.17-10.54 33.576-10.54 47.746 0L492 364.554V404c0 22.091-17.909 40-40 40Z"
                                                 data-original="#000000"
                                             ></path>
@@ -501,9 +496,9 @@ function ContactUs() {
                                     viewBox="0 0 548.244 548.244"
                                 >
                                     <path
-                                        fill-rule="evenodd"
+                                        fillRule="evenodd"
                                         d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                                        clip-rule="evenodd"
+                                        clipRule="evenodd"
                                         data-original="#000000"
                                     />
                                 </svg>
