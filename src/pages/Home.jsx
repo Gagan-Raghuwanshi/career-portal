@@ -7,12 +7,6 @@ import { MdOutlineMenuBook } from "react-icons/md";
 import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-// const img1 = "";
-// const img2 = ""
-// const img3 =
-// const img4 = ""
-// const img5 = ""
-// const img6 = ""
 
 function Home() {
   const cartData = [
@@ -82,7 +76,7 @@ function Home() {
       <div className=" px-40 mt-16 items-center justify-center">
         <div className="bg-whit mt-4 gap-9 grid items-center justify-center  lg:grid lg:grid-cols-4 ">
           {cartData.map((item,index) => (
-            // <Link to={item.route}>
+            <Link to={item.route}>
             <Cart
               img={item.img}
               courseName={item.courseName}
@@ -90,7 +84,7 @@ function Home() {
               route={item.route}
               key={index}
             />
-            // </Link>
+             </Link>
           ))}
         </div>
       </div>
